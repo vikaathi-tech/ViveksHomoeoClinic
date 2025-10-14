@@ -1,0 +1,191 @@
+@use "@coreui/coreui/scss/coreui" as * with ($enable-deprecation-messages: false,
+);
+@use "@coreui/chartjs/scss/coreui-chartjs";
+
+body {
+  background-color: var(--cui-tertiary-bg);
+}
+
+.wrapper {
+  width: 100%;
+  padding-inline: var(--cui-sidebar-occupy-start, 0) var(--cui-sidebar-occupy-end, 0);
+  will-change: auto;
+  @include transition(padding .15s);
+}
+
+.header>.container-fluid,
+.sidebar-header {
+  min-height: calc(4rem + 1px); // stylelint-disable-line function-disallowed-list
+  background-color: #5856d6;
+}
+
+.sidebar-brand-full {
+  margin-left: 3px;
+}
+
+.sidebar-header {
+  .nav-underline-border {
+    --cui-nav-underline-border-link-padding-x: 1rem;
+    --cui-nav-underline-border-gap: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: calc(4rem + 1px); // stylelint-disable-line function-disallowed-list
+  }
+}
+
+.sidebar-toggler {
+  margin-inline-start: auto;
+}
+
+.sidebar-narrow,
+.sidebar-narrow-unfoldable:not(:hover) {
+  .sidebar-toggler {
+    margin-inline-end: auto;
+  }
+}
+
+.header>.container-fluid+.container-fluid {
+  min-height: 3rem;
+  background-color: white;
+  color: #1b1b1b;
+}
+
+.sidebar {
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.nav-link active {
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  min-height: calc(3rem + 1px); // stylelint-disable-line function-disallowed-list
+}
+
+@include color-mode(dark) {
+  body {
+    background-color: var(--cui-dark-bg-subtle);
+  }
+
+  .footer {
+    --cui-footer-bg: var(--cui-body-bg);
+  }
+
+  .header>.container-fluid+.container-fluid {
+    min-height: 3rem;
+    background-color: #1b1b1b;
+    color: white;
+  }
+
+  .sidebar {
+    background-color: #1b1b1b;
+    color: white;
+  }
+
+  .breadcrumb-item .header-nav .ms-auto .nav-item {
+    color: white !important;
+  }
+
+  nav li a {
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .breadcrumb-item+.breadcrumb-item::before {
+    color: white !important;
+  }
+
+  .breadcrumb-item.active {
+    color: white !important;
+  }
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.header-toggler,
+.nav-link {
+  color: white;
+}
+
+.breadcrumb-item .header-nav .ms-auto .nav-item {
+  color: #1b1b1b !important;
+}
+
+.breadcrumb-item.active {
+  color: #1b1b1b !important;
+}
+
+.border-bottom {
+  border-bottom: 0px !important;
+}
+
+nav li a {
+  color: #1b1b1b !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #1b1b1b !important;
+}
+
+.header-toggler:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.simplebar-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 0.9rem;
+}
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-container-classes {
+  // Single container class with breakpoint max-widths
+  .container,
+  // 100% wide container at all breakpoints
+  .container-fluid {
+    @include make-container();
+  }
+
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        // max-width: $container-max-width;
+        max-width: 100% !important;
+      }
+
+      // Extend each breakpoint which is smaller or equal to the current breakpoint
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+
+          // Once the current breakpoint is reached, stop extending
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}
