@@ -1,0 +1,1 @@
+DATABASE_URL = "mysql+aiomysql://admin:admin@localhost:3306/viveks_homoeo_clinic"
