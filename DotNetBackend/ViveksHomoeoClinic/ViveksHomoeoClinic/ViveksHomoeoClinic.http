@@ -1,0 +1,6 @@
+@ViveksHomoeoClinic_HostAddress = http://localhost:5183
+
+GET {{ViveksHomoeoClinic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
