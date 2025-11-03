@@ -27,3 +27,4 @@ E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoCli
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\ViveksHomoeoClinic.pdb
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\ViveksHomoeoClinic.genruntimeconfig.cache
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\ref\ViveksHomoeoClinic.dll
+E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\ViveksHomoeoClinic.csproj.AssemblyReference.cache

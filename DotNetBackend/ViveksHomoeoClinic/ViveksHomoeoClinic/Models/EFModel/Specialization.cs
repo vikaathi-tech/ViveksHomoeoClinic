@@ -2,11 +2,11 @@
 
 namespace ViveksHomoeoClinic.Models.EFModel
 {
-    public class Gender
+    public class Specialization
     {
         [Key]
-        public int GenderId { get; set; }
+        public int SpecializationId {  get; set; }
         [Required]
-        public string Sex { get; set; }
+        public string SpecializationName { get; set; }
     }
 }
