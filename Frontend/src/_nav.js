@@ -17,49 +17,55 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'PATIENTS',
-    to: '/theme/colors',
+    name: 'VITALS',
+    to: '/forms/Vitals',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TOKENS',
+    to: '/grids/Tokens',
     icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'APPOINTMENT',
-    to: '/theme/typography',
+    to: '/grids/Appointment',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'STOCKS',
-    to: '/theme/stocks',
+    to: '/grids/Stocks',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
     name: 'ADMIN',
-    to: '/base',
+    to: '/grids',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
         name: 'STAFF',
-        to: '/base/accordion',
+        to: '/grids/Staff',
       },
       {
         component: CNavItem,
         name: 'PATIENTS',
-        to: '/base/patients',
+        to: '/grids/Patients',
       },
       {
         component: CNavItem,
         name: 'MEDICINE',
-        to: '/base/medicine',
+        to: '/grids/Medicine',
       }
     ],
   },
   {
     component: CNavItem,
     name: 'BILLING',
-    to: '/theme/billing',
+    to: '/grids/Billing',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   }
 ]

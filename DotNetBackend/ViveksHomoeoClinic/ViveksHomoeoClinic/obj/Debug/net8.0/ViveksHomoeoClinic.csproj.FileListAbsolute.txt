@@ -135,7 +135,6 @@ E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoCli
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\ViveksHomoeoClinic.MvcApplicationPartsAssemblyInfo.cs
-E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
 E:\G\Projects\VIKAATHI\Products\ViveksHomoeoClinic\DotNetBackend\ViveksHomoeoClinic\ViveksHomoeoClinic\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll

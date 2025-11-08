@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ViveksHomoeoClinic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b9e8f9bbba5d96c61e19a51dd241dcfdc0361dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45b054d0fcea2d68605fe5a38d046f6513cf0dd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ViveksHomoeoClinic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ViveksHomoeoClinic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

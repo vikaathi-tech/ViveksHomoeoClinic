@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ViveksHomoeoClinic.Data;
 
@@ -11,9 +12,11 @@ using ViveksHomoeoClinic.Data;
 namespace ViveksHomoeoClinic.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20251108084537_TokenandVitalTableAddition")]
+    partial class TokenandVitalTableAddition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -847,11 +850,7 @@ namespace ViveksHomoeoClinic.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("VitalsId"));
 
-                    b.Property<string>("BP_Dia")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("BP_Sys")
+                    b.Property<string>("BP")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -865,9 +864,6 @@ namespace ViveksHomoeoClinic.Migrations
                         .HasColumnType("double");
 
                     b.Property<double>("Temperature")
-                        .HasColumnType("double");
-
-                    b.Property<double>("Weight")
                         .HasColumnType("double");
 
                     b.HasKey("VitalsId");
