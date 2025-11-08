@@ -27,8 +27,8 @@ const Vitals = () => {
               <CInputGroup>
                 <CFormInput
                   floatingClassName="mb-3"
-                  floatingLabel="Weight"
-                  placeholder="Weight"
+                  floatingLabel="Body Weight"
+                  placeholder="Body Weight"
                 />
                 <CInputGroupText>Kg</CInputGroupText>
               </CInputGroup>
@@ -52,17 +52,17 @@ const Vitals = () => {
                   floatingLabel="Pulse"
                   placeholder="Pulse"
                 />
-                <CInputGroupText>Kg</CInputGroupText>
+                <CInputGroupText>bpm</CInputGroupText>
               </CInputGroup>
             </CCol>
             <CCol md={6}>
               <CInputGroup>
                 <CFormInput
                   floatingClassName="mb-3"
-                  floatingLabel="Temperature"
-                  placeholder="Temperature"
+                  floatingLabel="Body Temperature"
+                  placeholder="Body Temperature"
                 />
-                <CInputGroupText>Kg</CInputGroupText>
+                <CInputGroupText>°F</CInputGroupText>
               </CInputGroup>
             </CCol>
           </CRow>
@@ -71,10 +71,10 @@ const Vitals = () => {
               <CInputGroup>
                 <CFormInput
                   floatingClassName="mb-3"
-                  floatingLabel="Sugar"
-                  placeholder="Sugar"
+                  floatingLabel="Blood Sugar"
+                  placeholder="Blood Sugar"
                 />
-                <CInputGroupText>Kg</CInputGroupText>
+                <CInputGroupText>mg/dL</CInputGroupText>
               </CInputGroup>
             </CCol>
             <CCol md={6}>
