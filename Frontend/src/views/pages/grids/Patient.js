@@ -1,5 +1,5 @@
 import React from 'react'
-import { CTable } from '@coreui/react'
+import { CTable,CButton } from '@coreui/react'
 
 const Patients = () => {
   const columns = [
@@ -19,7 +19,14 @@ const Patients = () => {
     },
     {
       key: 'heading_2',
-      label: 'Heading',
+      label: (
+        <div className="d-flex justify-content-between align-items-center">
+          <span>Heading 2</span>
+          <CButton color="primary" size="sm">
+            Add
+          </CButton>
+        </div>
+      ),
       _props: { scope: 'col' },
     },
   ]
