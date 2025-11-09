@@ -12,7 +12,7 @@ const Vitals = () => {
             type="email"
             id="floatingInput"
             floatingClassName="mb-3"
-            floatingLabel="Email address"
+            floatingLabel="Search By Name / OP No"
             placeholder="name@example.com"
           />
         </CCol>
