@@ -2,7 +2,7 @@ import React from 'react'
 import { CCol, CForm, CFormInput, CFormLabel, CFormTextarea, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 import PatientCard from './PatientCard'
 
-const Vitals = () => {
+const PatientForm = () => {
   return (
 
     <CForm>
@@ -95,4 +95,4 @@ const Vitals = () => {
   )
 }
 
-export default Vitals
+export default PatientForm

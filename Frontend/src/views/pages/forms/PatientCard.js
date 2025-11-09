@@ -5,7 +5,7 @@ import { CButton, CCard, CCardBody, CCardImage, CCardText, CCardTitle } from '@c
 export const PatientCard = () => {
   return (
     <CCard style={{ width: '100%' }}>
-      <CCardImage orientation="top" src={'/../../assets/images/avatars/1.jpg'} />
+      <CCardImage orientation="top" src={'../../../assets/images/1.jpg'} />
       <CCardBody>
         <CCardTitle>Card title</CCardTitle>
         <CCardText>
