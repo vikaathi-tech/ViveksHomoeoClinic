@@ -31,6 +31,9 @@
 /DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj/ViveksHomoeoClinic.csproj.nuget.g.props
 /.vs/Products/v17/.wsuo
 /.vs/Products/v17/DocumentLayout.json
+/DotNetBackend/ViveksHomoeoClinic/.vs
+/DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj/Release/net8.0
+/DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj
 /DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/FileContentIndex/2a784b91-069f-41a7-a318-3404d53d25b4.vsidx
 /DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/FileContentIndex/454567c9-ad29-4fed-a0c1-b00b3c4d7bb6.vsidx
 /DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/FileContentIndex/b118f1c7-f4f0-4375-b613-2d882a8256e8.vsidx
@@ -57,3 +60,14 @@
 /DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/v17/DocumentLayout.json
 /DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj/Debug/net8.0/ref/ViveksHomoeoClinic.dll
 /DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj/Debug/net8.0/refint/ViveksHomoeoClinic.dll
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/CodeChunks.db
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/CodeChunks.db-shm
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/CodeChunks.db-wal
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-shm
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-wal
+/.vs/ViveksHomoeoClinic/FileContentIndex/9952e44b-5d30-4630-94d5-848086b82cb8.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/9e2e3a36-5f23-428f-8d42-2e82247dddf6.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/b7783d45-daf5-46a9-99a5-356075542889.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/ca56480e-0c28-4a40-a35b-a23a50e81ee4.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/dc55118a-1436-4299-911a-c620eb1705d4.vsidx
