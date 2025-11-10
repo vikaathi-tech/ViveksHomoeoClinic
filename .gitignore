@@ -2,6 +2,18 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/CodeChunks.db
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-shm
+/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-wal
+/.vs/ViveksHomoeoClinic/FileContentIndex/9993b64c-86ea-48a1-bdcd-8f77c294968f.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/9e2e3a36-5f23-428f-8d42-2e82247dddf6.vsidx
+/.vs/ViveksHomoeoClinic/FileContentIndex/b7783d45-daf5-46a9-99a5-356075542889.vsidx
+/.vs/ViveksHomoeoClinic/v17/DocumentLayout.backup.json
+/DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db
+/DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-shm
+/DotNetBackend/ViveksHomoeoClinic/.vs/ViveksHomoeoClinic/CopilotIndices/0.2.1653.9816/SemanticSymbols.db-wal
+/DotNetBackend/ViveksHomoeoClinic/ViveksHomoeoClinic/obj/Release/net8.0/ViveksHomoeoClinic.csproj.AssemblyReference.cache
 /DotNetBackend/ViveksHomoeoClinic/.vs/ProjectEvaluation/vivekshomoeoclinic.metadata.v9.bin
 /DotNetBackend/ViveksHomoeoClinic/.vs/ProjectEvaluation/vivekshomoeoclinic.projects.v9.bin
 /DotNetBackend/ViveksHomoeoClinic/.vs/ProjectEvaluation/vivekshomoeoclinic.strings.v9.bin
