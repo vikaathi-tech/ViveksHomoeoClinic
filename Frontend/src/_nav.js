@@ -17,8 +17,14 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'RECEPTION',
+    to: '/forms/Reception',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
     name: 'VITALS',
-    to: '/forms/Vitals',
+    to: '/grids/Vitals',
     icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {

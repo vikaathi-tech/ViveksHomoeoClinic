@@ -14,5 +14,11 @@ namespace ViveksHomoeoClinic.Models.EFModel
         public Patient Patient { get; set; }
         public int TokenNumber { get; set; }
         public string ModeOfToken { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsBooked { get; set; }
+
+        public int AppointmentId { get; set; }
+        [ForeignKey(nameof(AppointmentId))]
+        public Appointment Appointment { get; set; }
     }
 }

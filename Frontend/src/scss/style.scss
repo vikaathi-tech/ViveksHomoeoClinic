@@ -23,6 +23,14 @@ body {
   margin-left: 3px;
 }
 
+.textarea-content{
+  padding-bottom: 5%;
+}
+
+.case-table{
+  margin-top: 2%;
+}
+
 .sidebar-header {
   .nav-underline-border {
     --cui-nav-underline-border-link-padding-x: 1rem;
@@ -58,10 +66,9 @@ body {
   color: white;
 }
 
-.nav-link active {
-  background-color: white;
-  color: black;
-}
+
+
+
 
 .footer {
   min-height: calc(3rem + 1px); // stylelint-disable-line function-disallowed-list
@@ -103,15 +110,27 @@ body {
   .breadcrumb-item.active {
     color: white !important;
   }
+
+  .form-tabs>.nav-link {
+    color: white !important;
+  }
+
+  .casehistory-tabs>.nav-link {
+    color: white !important;
+  }
 }
 
-.nav-link {
+.simplebar-content>.nav-link {
+  color: white !important;
+}
+
+.simplebar-content>.nav-link :active {
   color: white !important;
 }
 
 .header-toggler,
 .nav-link {
-  color: white;
+  color: white !important;
 }
 
 .breadcrumb-item .header-nav .ms-auto .nav-item {
@@ -152,11 +171,20 @@ nav li a {
   line-height: 1.25;
 }
 
+.form-tabs>.nav-link {
+  color: black !important;
+}
+
+.casehistory-tabs>.nav-link {
+  color: black !important;
+}
+
 // Container widths
 //
 // Set the container width, and override it for fixed navbars in media queries.
 
 @if $enable-container-classes {
+
   // Single container class with breakpoint max-widths
   .container,
   // 100% wide container at all breakpoints
@@ -186,7 +214,7 @@ nav li a {
           }
 
           // Once the current breakpoint is reached, stop extending
-          @if ($breakpoint == $name) {
+          @if ($breakpoint ==$name) {
             $extend-breakpoint: false;
           }
         }

@@ -1,48 +1,86 @@
 import React from 'react'
-import { CTable } from '@coreui/react'
+import { CTable,CButton } from '@coreui/react'
+import { useNavigate } from "react-router-dom";
 
 const Tokens = () => {
+
+  const navigate = useNavigate();
+
+  const handleRowClick = (id) => {
+    navigate(`/forms/CaseDetails/${id}`);      // Navigate with ID
+  };
   const columns = [
     {
-      key: 'id',
-      label: '#',
+      key: 'TokenNo',
+      label: 'Token Number',
       _props: { scope: 'col' },
     },
     {
-      key: 'class',
+      key: 'OPNumber',
+      label: 'OP Number',
+      _props: { scope: 'col' },
+    },
+    
+    {
+      key: 'EntryTime',
+      label: 'Entry Time',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_1',
-      label: 'Heading1',
+      key: 'PatientName',
+      label: 'Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_2',
-      label: 'Heading2',
+      key: 'LastVisit',
+      label: 'Last Visit',
       _props: { scope: 'col' },
     },
+    {
+      key: 'Action',
+      label: '',
+      _props: { scope: 'col' },
+    }
   ]
   const items = [
     {
-      id: 1,
-      class: 'Mark',
-      heading_1: 'Otto',
-      heading_2: '@mdo',
+      TokenNo: 1,
+      OPNumber:123,
+      EntryTime: 'Otto',
+      PatientName: '@mdo',
+      LastVisit: '@mdo',
+      Action: (
+              <CButton size="sm" color="primary"  onClick={() => handleRowClick(1)}>
+                Case Details
+              </CButton>
+            ),
       _cellProps: { id: { scope: 'row' } },
     },
     {
-      id: 2,
-      class: 'Jacob',
-      heading_1: 'Thornton',
-      heading_2: '@fat',
+      TokenNo: 1,
+      OPNumber:123,
+      EntryTime: 'Otto',
+      PatientName: '@mdo',
+      LastVisit: '@mdo',
+      Action: (
+              <CButton size="sm" color="primary"  onClick={() => navigate("forms/CaseDetails")}>
+                Case Details
+              </CButton>
+            ),
       _cellProps: { id: { scope: 'row' } },
     },
     {
-      id: 3,
-      class: 'Larry the Bird',
-      heading_2: '@twitter',
-      _cellProps: { id: { scope: 'row' }, class: { colSpan: 2 } },
+     TokenNo: 1,
+     OPNumber:123,
+      EntryTime: 'Otto',
+      PatientName: '@mdo',
+      LastVisit: '@mdo',
+      Action: (
+              <CButton size="sm" color="primary" onClick={() => navigate("forms/CaseDetails")}>
+                Case Details
+              </CButton>
+            ),
+      _cellProps: { id: { scope: 'row' } },
     },
   ]
 
