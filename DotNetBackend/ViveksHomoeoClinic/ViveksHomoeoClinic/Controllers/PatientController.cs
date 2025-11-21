@@ -7,7 +7,7 @@ namespace ViveksHomoeoClinic.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class PatientController : ControllerBase
     {
         private readonly IPatientService _patientService;
