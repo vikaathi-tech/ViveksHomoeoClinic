@@ -21,5 +21,6 @@ namespace ViveksHomoeoClinic.Models.EFModel
         public bool IsLocked { get; set; }
         public bool IsActive { get; set; }
         public byte[] Image { get; set; }
+        public string RefreshToken { get; set; }
     }
 }
