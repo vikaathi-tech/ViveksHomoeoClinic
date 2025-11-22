@@ -14,5 +14,10 @@ namespace ViveksHomoeoClinic.Services
         {
             return await _patientRepo.GetAllPatients();
         }
+
+        public async bool AddPatient()
+        {
+            return await _patientRepo.AddPatient();
+        }
     }
 }

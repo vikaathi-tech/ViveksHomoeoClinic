@@ -22,5 +22,12 @@ namespace ViveksHomoeoClinic.Controllers
         {
             return await _patientService.GetAllPatients();
         }
+
+        [Route("AddPatient")]
+        [HttpPost]
+        public async bool AddPatient()
+        {
+            return await _patientService.AddPatient();
+        }
     }
 }
