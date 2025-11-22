@@ -5,6 +5,13 @@ import {
   cilPencil,
   cilPuzzle,
   cilSpeedometer,
+  cilCalendarCheck,
+  cilNoteAdd,
+  cilRoom,
+  cilMedicalCross,
+  cilStorage,
+  cilLibraryBuilding,
+  cilCalculator
 } from '@coreui/icons'
 import { CNavGroup, CNavItem } from '@coreui/react'
 
@@ -17,33 +24,39 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'VITALS',
-    to: '/forms/Vitals',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    name: 'RECEPTION',
+    to: '/forms/Reception',
+    icon: <CIcon icon={cilRoom} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'TOKENS',
+    name: 'VITALS',
+    to: '/grids/Vitals',
+    icon: <CIcon icon={cilNoteAdd} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'CONSULTATION',
     to: '/grids/Tokens',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilMedicalCross} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'APPOINTMENT',
     to: '/grids/Appointment',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCalendarCheck} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'STOCKS',
     to: '/grids/Stocks',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilStorage} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
     name: 'ADMIN',
     to: '/grids',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilLibraryBuilding} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
@@ -66,7 +79,7 @@ const _nav = [
     component: CNavItem,
     name: 'BILLING',
     to: '/grids/Billing',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
   }
 ]
 

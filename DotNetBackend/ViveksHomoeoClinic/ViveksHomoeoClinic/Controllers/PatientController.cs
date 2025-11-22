@@ -7,7 +7,7 @@ namespace ViveksHomoeoClinic.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class PatientController : ControllerBase
     {
         private readonly IPatientService _patientService;
@@ -21,6 +21,13 @@ namespace ViveksHomoeoClinic.Controllers
         public async Task<List<PatientDTO>> GetAllPatients()
         {
             return await _patientService.GetAllPatients();
+        }
+
+        [Route("AddPatient")]
+        [HttpPost]
+        public async bool AddPatient()
+        {
+            return await _patientService.AddPatient();
         }
     }
 }

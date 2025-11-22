@@ -204,6 +204,12 @@ namespace ViveksHomoeoClinic.Data
             .HasForeignKey<Token>(a => a.PatientId)
             .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Token>()
+           .HasOne(a => a.Patient)
+           .WithMany()
+           .HasForeignKey(a => a.AppointmentId)
+           .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Vitals>()
             .HasOne(a => a.Patient)
             .WithOne()

@@ -12,9 +12,6 @@ export const PatientCard = () => {
           Some quick example text to build on the card title and make up the bulk of the card's
           content.
         </CCardText>
-        <CButton color="primary" href="#">
-          Go somewhere
-        </CButton>
       </CCardBody>
     </CCard>
   )

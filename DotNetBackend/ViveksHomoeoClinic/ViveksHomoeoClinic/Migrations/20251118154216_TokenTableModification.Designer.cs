@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ViveksHomoeoClinic.Data;
 
@@ -11,9 +12,11 @@ using ViveksHomoeoClinic.Data;
 namespace ViveksHomoeoClinic.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20251118154216_TokenTableModification")]
+    partial class TokenTableModification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -804,13 +807,7 @@ namespace ViveksHomoeoClinic.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("TokenId"));
 
-                    b.Property<int>("AppointmentId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsBooked")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("ModeOfToken")
@@ -825,7 +822,8 @@ namespace ViveksHomoeoClinic.Migrations
 
                     b.HasKey("TokenId");
 
-                    b.HasIndex("AppointmentId");
+                    b.HasIndex("PatientId")
+                        .IsUnique();
 
                     b.ToTable("Token");
                 });
@@ -1146,19 +1144,11 @@ namespace ViveksHomoeoClinic.Migrations
 
             modelBuilder.Entity("ViveksHomoeoClinic.Models.EFModel.Token", b =>
                 {
-                    b.HasOne("ViveksHomoeoClinic.Models.EFModel.Appointment", "Appointment")
-                        .WithMany()
-                        .HasForeignKey("AppointmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ViveksHomoeoClinic.Models.EFModel.Patient", "Patient")
-                        .WithMany()
-                        .HasForeignKey("AppointmentId")
+                        .WithOne()
+                        .HasForeignKey("ViveksHomoeoClinic.Models.EFModel.Token", "PatientId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.Navigation("Appointment");
 
                     b.Navigation("Patient");
                 });

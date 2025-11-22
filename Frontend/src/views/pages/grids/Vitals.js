@@ -1,52 +1,109 @@
-import React from 'react'
-import { CTable } from '@coreui/react'
+import React, { useState } from 'react'
+import { CTable, CButton, CModal, CModalHeader, CModalBody, CFormInput, CModalFooter } from '@coreui/react'
+import VitalsForm from '../forms/VitalsForm';
 
 const Vitals = () => {
+
+  const [visible, setVisible] = useState(false);
+  const [selectedRow, setSelectedRow] = useState(null);
+
+  const openForm = (id) => {
+    const row = items.find(x => x.TokenNo === id);
+    setSelectedRow(row);
+    setVisible(true);
+  };
+
   const columns = [
     {
-      key: 'id',
-      label: '#',
+      key: 'TokenNo',
+      label: 'Token No',
       _props: { scope: 'col' },
     },
     {
-      key: 'class',
+      key: 'OPNo',
+      label: 'OP Number',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_1',
-      label: 'Heading1',
+      key: 'Name',
+      label: 'Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_2',
-      label: 'Heading2',
+      key: 'Action',
+      label: '',
       _props: { scope: 'col' },
-    },
+    }
+
   ]
   const items = [
     {
-      id: 1,
-      class: 'Mark',
-      heading_1: 'Otto',
-      heading_2: '@mdo',
-      _cellProps: { id: { scope: 'row' } },
+      TokenNo: 1,
+      OPNo: 'Otto',
+      Name: '@mdo',
+      _cellProps: { TokenNo: { scope: 'row' } },
+      Action: (
+        <CButton size="sm" color="primary" onClick={() => openForm(1)}>
+          Check Vitals
+        </CButton>
+      ),
     },
     {
-      id: 2,
-      class: 'Jacob',
-      heading_1: 'Thornton',
-      heading_2: '@fat',
-      _cellProps: { id: { scope: 'row' } },
+      TokenNo: 2,
+      OPNo: 'Thornton',
+      Name: '@fat',
+      _cellProps: { TokenNo: { scope: 'row' } },
+      Action: (
+        <CButton size="sm" color="primary" onClick={() => openForm(1)}>
+          Check Vitals
+        </CButton>
+      ),
     },
     {
-      id: 3,
-      class: 'Larry the Bird',
-      heading_2: '@twitter',
-      _cellProps: { id: { scope: 'row' }, class: { colSpan: 2 } },
-    },
+      TokenNo: 3,
+      OPNo: '@twitter',
+      Name: '@twitter',
+      _cellProps: { TokenNo: { scope: 'row' } },
+      Action: (
+        <CButton size="sm" color="primary" onClick={() => openForm(1)}>
+          Check Vitals
+        </CButton>
+      ),
+    }
   ]
 
-  return <CTable columns={columns} items={items} tableHeadProps={{ color: 'dark' }}/>
+  // return  <CTable columns={columns} items={items} tableHeadProps={{ color: 'dark' }}/>
+  // {/* Modal Form */}
+  //     <CModal visible={visible} onClose={() => setVisible(false)}>
+  //       <CModalHeader>Enter Vitals</CModalHeader>
+
+  //       <CModalBody>
+  //         <VitalsForm></VitalsForm>
+  //       </CModalBody>
+
+  //       <CModalFooter>
+  //         <CButton color="secondary" onClick={() => setVisible(false)}>Close</CButton>
+  //         <CButton color="primary">Save</CButton>
+  //       </CModalFooter>
+  //     </CModal>
+
+  return (
+    <>
+      <CTable columns={columns} items={items} tableHeadProps={{ color: 'dark' }}></CTable>
+      <CModal visible={visible} onClose={() => setVisible(false)} size="xl">
+        <CModalHeader>Enter Vitals</CModalHeader>
+
+        <CModalBody>
+          <VitalsForm></VitalsForm>
+        </CModalBody>
+
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setVisible(false)}>Close</CButton>
+          <CButton color="primary">Add to Queue</CButton>
+        </CModalFooter>
+      </CModal>
+    </>
+  )
 }
 
 export default Vitals

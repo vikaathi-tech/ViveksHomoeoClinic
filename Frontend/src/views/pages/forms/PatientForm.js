@@ -15,7 +15,7 @@ const PatientForm = () => {
             floatingLabel="Search By Name / OP No"
             placeholder="name@example.com"
           />
-        </CCol>
+        </CCol>cd
       </CRow>
       <CRow className='mb-3'>
         <CCol md={3}>

@@ -1,52 +1,47 @@
 import React from 'react'
-import { CTable } from '@coreui/react'
+import { CTable, CButton } from '@coreui/react'
 
 const Appointment = () => {
   const columns = [
     {
-      key: 'id',
-      label: '#',
+      key: 'Date',
+      label: 'Date',
       _props: { scope: 'col' },
     },
     {
-      key: 'class',
+      key: 'PatientName',
+      label: 'Patient Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_1',
-      label: 'Heading',
+      key: 'ConsultingDoctor',
+      label: 'Consulting Doctor',
       _props: { scope: 'col' },
     },
     {
-      key: 'heading_2',
-      label: 'Heading',
+      key: 'Time',
+      label: (
+        <div className="d-flex justify-content-between align-items-center">
+          <span>Time</span>
+          <CButton color="primary" size="sm">
+            Add
+          </CButton>
+        </div>
+      ),
       _props: { scope: 'col' },
-    },
+    }
   ]
   const items = [
     {
-      id: 1,
-      class: 'Mark',
-      heading_1: 'Otto',
-      heading_2: '@mdo',
+      Date: '21/11/2025',
+      PatientName: 'Mark',
+      ConsultingDoctor: 'Otto',
+      Time: '4.50 pm',
       _cellProps: { id: { scope: 'row' } },
-    },
-    {
-      id: 2,
-      class: 'Jacob',
-      heading_1: 'Thornton',
-      heading_2: '@fat',
-      _cellProps: { id: { scope: 'row' } },
-    },
-    {
-      id: 3,
-      class: 'Larry the Bird',
-      heading_2: '@twitter',
-      _cellProps: { id: { scope: 'row' }, class: { colSpan: 2 } },
-    },
+    }
   ]
 
-  return <CTable columns={columns} items={items} tableHeadProps={{ color: 'dark' }}/>
+  return <CTable columns={columns} items={items} tableHeadProps={{ color: 'dark' }} />
 }
 
 export default Appointment
