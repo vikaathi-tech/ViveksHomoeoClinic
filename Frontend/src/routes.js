@@ -25,7 +25,7 @@ const routes = [
   { path: '/grids/Patients', name: 'Patients', element: Patients },
   { path: '/grids/Medicine', name: 'Medicine', element: Medicine },
   { path: '/grids/Billing', name: 'Billing', element: Billing },
-  { path: '/forms/CaseDetails/:id', name: 'CaseDetails', element: Case },
+  { path: '/forms/CaseDetails/:id', name: 'CaseDetails', element: Case }
 ]
 
 export default routes
